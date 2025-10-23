@@ -3,6 +3,8 @@
 # Virtual Environment
 venv
 
+.env/
+
 # octofit tracker app
 # octfit-tracker
 

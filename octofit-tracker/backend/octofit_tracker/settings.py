@@ -22,19 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-sczk3d!o4%pi%l%ubc9v3@crfgmus)33oty9$l%!)hkei_z*(8'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-import os
-CODESPACE_NAME = os.environ.get('CODESPACE_NAME')
+# Configuración de hosts para Codespaces y local
 import os
 CODESPACE_NAME = os.environ.get('CODESPACE_NAME')
 if CODESPACE_NAME:
-    ALLOWED_HOSTS = [f"{CODESPACE_NAME}-8000.app.github.dev", "localhost", "127.0.0.1"]
+    ALLOWED_HOSTS = [f"{CODESPACE_NAME}-8000.app.github.dev", f"{CODESPACE_NAME}-3000.app.github.dev", "localhost", "127.0.0.1"]
 else:
     ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
-if CODESPACE_NAME:
-        ALLOWED_HOSTS.append(f"{CODESPACE_NAME}-8000.app.github.dev")
 
 
 # Application definition
@@ -131,12 +127,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATIC_URL = 'static/'
 
+
+
 # Configuración de CORS
-INSTALLED_APPS += [
-    'corsheaders',
-]
+INSTALLED_APPS += ['corsheaders']
 MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = ['*']
+CORS_ALLOW_METHODS = ['*']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
