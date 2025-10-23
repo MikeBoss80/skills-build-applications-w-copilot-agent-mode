@@ -1,10 +1,15 @@
+
 .App {
   text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
 }
 
+
 .App-logo {
-  height: 40vmin;
+  height: 60px;
   pointer-events: none;
+  margin-right: 16px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,19 +18,98 @@
   }
 }
 
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: #fff;
+  padding: 2rem 0;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+
 .App-link {
-  color: #61dafb;
+  color: #ff9800;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Bootstrap customizations */
+.navbar {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar-brand {
+  color: #fff !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-link {
+  color: #ffe082 !important;
+  font-weight: 500;
+}
+.nav-link.active {
+  color: #fff !important;
+  background: #2575fc;
+  border-radius: 8px;
+}
+
+/* Headings */
+h1, h2, h5 {
+  color: #007bff;
+  font-weight: 700;
+}
+
+/* Tables */
+.table {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.table-dark th {
+  background: #007bff !important;
+  color: #fff !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background: #e3f2fd;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #ff9800 0%, #f44336 100%);
+  border: none;
+}
+.btn-success {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  border: none;
+}
+.btn-secondary {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  border: none;
+}
+
+/* Cards */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: none;
+}
+.card-title {
+  color: #f44336;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 16px;
+}
+.modal-header {
+  background: #007bff;
+  color: #fff;
+  border-radius: 16px 16px 0 0;
+}
+.modal-footer {
+  border-radius: 0 0 16px 16px;
 }
 
 @keyframes App-logo-spin {
